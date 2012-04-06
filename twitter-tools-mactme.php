@@ -2,8 +2,8 @@
 /*
 Plugin Name: Twitter Tools - mact.me URLs 
 Plugin URI: https://github.com/danmactough/twitter-tools-mactme
-Description: Use Bit.ly for URL shortening with Twitter Tools. This plugin relies on Twitter Tools, configure it on the Twitter Tools settings page.
-Version: 1.0
+Description: Use mact.me for URL shortening with Twitter Tools. This plugin relies on Twitter Tools, configure it on the Twitter Tools settings page.
+Version: 2.4
 Author: Dan MacTough
 Author URI: http://yabfog.com/blog/
 */
