@@ -19,8 +19,6 @@ if (!defined('PLUGINDIR')) {
 load_plugin_textdomain('twitter-tools-mactme');
 
 define('AKTT_MACTME_API_SHORTEN_URL', 'http://short.mact.me/shorten');
-// define('AKTT_BITLY_API_SHORTEN_URL_JMP', 'http://api.j.mp/shorten');
-// define('AKTT_BITLY_API_VERSION', '2.0.1');
 
 function aktt_mactme_shorten_url($url) {
 	$parts = parse_url($url);
@@ -33,9 +31,8 @@ function aktt_mactme_shorten_url($url) {
 		}
 		$snoop->agent = 'Twitter Tools http://alexking.org/projects/wordpress';
 		$snoop->fetch($api);
-		$result = json_decode($snoop->results);
-		if (!empty($result->results->{$url}->shortUrl)) {
-			$url = $result->results->{$url}->shortUrl;
+		if (!empty($snoop->results)) {
+			$url = $snoop->results;
 		}
 	}
 	return $url;
